@@ -17,4 +17,6 @@ What it does, in the browser, after the drawing streams in:
 - **Reading**: a one-line text that would have to shrink under 10.5 px wraps at its own size instead, with room made under it; a ring around a word inside a sentence becomes a tight pill with space either side, so it never cuts the next word; short forms (NPV, WACC, YTM) whose words never appear on a drawing get a "Short forms" key line under it.
 - **Spacing**: two separate words that run into each other move apart: on one line sideways (a 6 px gap), in a table cell the left label wraps onto two lines centred on its row, otherwise the smaller one-line text steps a few px to the nearest free spot; never off its box, onto a picture, or apart from its row pieces.
 
+It runs once when the page's fonts are already loaded (again after they load otherwise), and measures each word once, so a chat with dozens of drawings stays responsive.
+
 No data is collected; the script only rearranges the drawing it runs in.
